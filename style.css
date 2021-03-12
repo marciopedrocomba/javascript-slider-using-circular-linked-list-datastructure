@@ -1,0 +1,80 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: #f3f3f3;
+}
+
+.slide-banner {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.numbers {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    padding: 3px;
+    color: #fff;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: fade;
+    animation-duration: 0.8s;
+}
+
+.slide-image  img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.controllers {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0 10px;
+}
+
+.controllers a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    border-radius: 100px;
+    line-height: 60px;
+}
+
+.controllers a .fa {
+    font-size: 1.3em;
+}
+
+
+@keyframes fade {
+
+    from { opacity: 0; }
+    to { opacity: 1; }
+
+}
