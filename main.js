@@ -13,6 +13,7 @@ class AppController {
         this.linkedList = new CircularLinkedList() // instantiate the linked list class
         this.initialize() // init the app events and more
         this.initSlider() // init the auto slider
+        this.initKeyEvents() // this is the left and back arrow mouse click
 
     }
 
@@ -64,6 +65,28 @@ class AppController {
 
         //set a timer for the slider to run
         this.timer = this.initTimer()
+
+    }
+
+    //this the key event method
+    initKeyEvents() {
+
+        window.addEventListener('keyup', e => {
+
+            switch(e.key) {
+                case 'ArrowLeft': 
+                case 'A':
+                case 'a':
+                    this.updateSlide("left")
+                    break
+                case 'ArrowRight': 
+                case 'D':
+                case 'd':
+                    this.updateSlide()
+                    break
+            }
+
+        })
 
     }
 
